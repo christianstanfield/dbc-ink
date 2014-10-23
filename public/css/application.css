@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  width: 70%;
+  /*background-color: lightgray;*/
+}
+
+#logout {
+  position: absolute;
+  top: 0px;
+  right: 20%;
+  margin-top: 20px;
+}

@@ -1,0 +1,6 @@
+  <div class='content'>
+    <p><%= @album.name %></p>
+    <% @photos.each do |photo| %>
+      <img class='image' src="<%= photo.photo_url %>">
+    <% end %>
+  </div>
