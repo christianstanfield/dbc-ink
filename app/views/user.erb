@@ -1,27 +1,24 @@
-<div class='container'>
 
+<div class='upload'>
+  <form action='/upload' method='post' enctype="multipart/form-data">
+    <input type='text' name='album' placeholder='Album to upload to'>
+    <input type='file' name='photo_url'>
+    <input type='submit' value='Upload'>
+  </form>
+</div>
 
-  <div class='upload'>
-    <form action='/upload' method='post' enctype="multipart/form-data">
-      <input type='text' name='album' placeholder='Album to upload to'>
-      <input type='file' name='photo_url'>
-      <input type='submit' value='Upload'>
-    </form>
-  </div>
+<div class='albums'>
+  <p>Your albums</p>
+  <% @albums.each do |album| %>
+    <ul>
+      <li><a href='/album/<%= album.id %>'><%= album.name %></a></li>
+    </ul>
+  <% end %>
+</div>
 
-  <div class='albums'>
-    <p>Your albums</p>
-    <% @albums.each do |album| %>
-      <ul>
-        <li><a href='/album/<%= album.id %>'><%= album.name %></a></li>
-      </ul>
-    <% end %>
-  </div>
-
-  <div class='content'>
-    <p>Your photos</p>
-    <% @photos.each do |photo| %>
-      <img class='image' src="<%= photo.photo_url %>">
-    <% end %>
-  </div>
+<div class='content'>
+  <p>Your photos</p>
+  <% @photos.each do |photo| %>
+    <img class='image' src="<%= photo.photo_url %>">
+  <% end %>
 </div>

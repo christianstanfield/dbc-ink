@@ -22,7 +22,6 @@ require 'erb'
 require 'byebug'
 require 'cowsay'
 require 'did_you_mean'
-# require 'nyan-cat-formatter'
 require 'seeing_is_believing'
 
 # Some helper constants for path-centric logic

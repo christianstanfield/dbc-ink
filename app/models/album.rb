@@ -1,5 +1,5 @@
 class Album < ActiveRecord::Base
-  # Remember to create a migration!
-  has_many :photos
-  belongs_to :user
+
+  has_many :albumphotos
+  has_many :photos, through: :albumphotos
 end
