@@ -1,16 +1,15 @@
-
 <div class='login'>
   <% if @message %>
   <h3><%= @message %></h3>
   <img src="/imgs/ah-ah-ah-o.gif">
   <% end %>
-  <p> Log in if you registered </p>
-  <form action='login' method='post'>
+  <h2>Log in</h2>
+  <form class='login' action='login' method='post'>
     <%= erb :_login_form %>
     <input type='submit' value='Log in'>
   </form>
-  <p>Register if you haven't</p>
-  <form action='/register' method='post'>
+  <h2>Register</h2>
+  <form class='register' action='/register' method='post'>
     <%= erb :_login_form %>
     <input type='submit' value='Register'>
   </form>
