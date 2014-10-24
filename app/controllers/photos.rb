@@ -1,4 +1,5 @@
-get "/user/:user_id/photos/new" do
+get "/photos/new" do
+  @photo = Photo.new
   erb :"photos/new"
 end
 

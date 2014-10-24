@@ -7,9 +7,9 @@
       See: http://necolas.github.com/normalize.css/
     -->
     <link rel="stylesheet" href="/css/normalize.css">
-    <!--
-      application.css is where you put your styles
-    -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
     <link href='http://fonts.googleapis.com/css?family=Rouge+Script' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/application.css">
 
@@ -21,15 +21,11 @@
   <body>
     <header>
       <nav>
-        <img src="imgs/logo.png" alt="Dev Bootcamp Logo" width="270" height="130">    
+        <img src="/imgs/logo.png" alt="Dev Bootcamp Logo" width="270" height="130">    
         <h1 style='text-align: center'><a href="">Ink</a></h1>
         <div class="picture-upload">
         <% if session[:user] != nil %>
-          <form id="uploader" action="/upload" method="get">
-            <input type='submit' value="Upload a Picture">
-          </form>
-        <% else %>
-        <form id="uploader" action="/upload" method="get">
+          <form id="uploader" action="/photos/new" method="get">
             <input type='submit' value="Upload a Picture">
           </form>
           <% end %>
@@ -40,15 +36,15 @@
               <input type='submit' value='Log out'>
             </form>
           <% else %>
-            <form id="login" action="/login" method="get">
+            <form id="login" action="/users/new" method="get">
               <input type="submit" value="Login">
             </form>
           <% end %>
         </div>
       </nav>
   </header>
-    <div class='container'>
+    <!-- <div class='container'> -->
       <%= yield %>
-    </div>
+    <!-- </div> -->
   </body>
 </html>

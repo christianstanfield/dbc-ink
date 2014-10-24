@@ -1,36 +1,9 @@
-<div class='login'>
-  <% if @message %>
-  <h3><%= @message %></h3>
-  <img src="/imgs/ah-ah-ah-o.gif">
-  <% end %>
-  <h2>Log in</h2>
-  <form class='login' action='login' method='post'>
-    <%= erb :_login_form %>
-    <input type='submit' value='Log in'>
-  </form>
-  <h2>Register</h2>
-  <form class='register' action='/register' method='post'>
-    <%= erb :_login_form %>
-    <input type='submit' value='Register'>
-  </form>
-</div>
-
-<% unless @albums.empty? %>
-<div class='albums'>
-  <p>All albums</p>
-  <% @albums.each do |album| %>
-    <ul>
-      <li><a href='/album/<%= album.id %>'><%= album.name %></a></li>
-    </ul>
-  <% end %>
-</div>
-<% end %>
 
 <% unless @photos.empty? %>
 <div class='content'>
   <p>All photos</p>
   <% @photos.each do |photo| %>
-    <img class='image' src="<%= photo.photo_url %>">
+    <img class='image' src="<%= photo.url %>" width="300px">
   <% end %>
 </div>
 <% end %>
