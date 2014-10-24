@@ -8,6 +8,10 @@ body {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
+
+  width: 70%;
+  border: 1px dashed red;
+
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
@@ -41,10 +45,86 @@ body {
 
 label{
   margin-left: 10px;
+
 }
 
 .btn{
   background-color: rgba(237, 81, 66, 1.0);
+}
+
+
+header {
+	border-bottom: 1px solid black;
+	max-height: 120px;
+	width: 100%;
+	background-color: rgba(248, 247, 247, 1.0);
+}
+
+header nav h1 a {
+	text-decoration: none;
+	color: rgba(237, 81, 66, 1.0);
+}
+
+header nav h1 {
+	float: left;
+	font-family: 'Rouge Script', cursive;
+	position: relative;
+	z-index: 2;
+	margin-left: -180px;
+	margin-top: 25px;
+	font-size: 4.5em;
+	color: rgba(237, 81, 66, 1.0);
+}
+
+header nav h1 a:hover {
+	color: rgba(176, 59, 48, 1.0);
+}
+
+header nav h1 a:visited {
+	color: rgba(237, 81, 66, 1.0);
+}
+
+nav {
+	display: inline-block;
+	position: relative;
+	width: 90%;
+	max-height: 120px;
+	margin-left: 5%;
+}
+
+nav img {
+	float: left;
+	max-height: 120px;
+	z-index: 1;
+	opacity: .3;
+}
+
+header nav .picture-upload {
+	float: left;
+	position: relative;
+	margin-top: 40px;
+	margin-left: 300px;
+}
+
+header nav .picture-upload input {
+	background-color: rgba(237, 81, 66, 1.0);
+	border: 1px solid rgba(176, 59, 48, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+	width: 150px;
+	height: 34px;
+}
+
+header nav .user-login {
+	float: right;
+	margin: 40px 30px 30px 30px;
+}
+
+header nav .user-login input {
+	background-color: rgba(237, 81, 66, 1.0);
+	border: 1px solid rgba(176, 59, 48, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+	width: 150px;
+	height: 34px;
 }
 
 .btn:hover{
@@ -52,6 +132,4 @@ label{
 }
 
 
-/*#dropdown{
-  margin-left: 10px;
-}*/
+
