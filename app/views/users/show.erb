@@ -1,0 +1,18 @@
+
+<a href="/user/<%= @user.id %>/photos/new">Upload Photo</a>
+
+<div class="profile">
+  <h2>Profile</h2>
+  <!-- User photo -->
+  <p><%= @user.first_name  %> <%= @user.last_name  %></p>
+  <p><%= @user.email  %></p>
+  <p><%= @user.cohort  %></p>
+  <p><%= @user.dbc_location  %></p>
+</div>
+
+<div class='content'>
+  <h2>Your photos</h2>
+  <% @photos.each do |photo| %>
+    <img class='image' src="<%= photo.url %>" width='300px'>
+  <% end %>
+</div>
