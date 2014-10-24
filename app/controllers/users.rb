@@ -39,9 +39,10 @@ end
 
 get '/user/:user_id' do
   if session[:user]
-    @albums = session[:user].albums
+    # @albums = session[:user].albums
+    @user = session[:user]
     @photos = session[:user].photos
-    erb :user
+    erb :"users/show"
   else
     @message = "Get that shit outta here"
     @albums = Album.all
@@ -50,14 +51,7 @@ get '/user/:user_id' do
   end
 end
 
-post '/upload' do
-  @user = session[:user]
-  album = @user.albums.find_or_create_by(name: params[:album])
-  album.photos.create!(photo_url: params[:photo_url])
-  # @current_photo = Photo.new(params[:user])
-  # @current_photo.photo_url = params[:user][:photo_url]
-  redirect "/user/#{@user.id}"
-end
+
 
 get '/album/:album_id' do
   @album = Album.find(params[:album_id])

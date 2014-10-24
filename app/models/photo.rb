@@ -4,5 +4,5 @@ class Photo < ActiveRecord::Base
   has_many :albumphotos
   has_many :albums, through: :albumphotos
 
-  mount_uploader :photo_url, PhotoUploader
+  mount_uploader :url, PhotoUploader
 end
