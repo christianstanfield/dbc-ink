@@ -1,7 +1,6 @@
 
 <% unless @photos.empty? %>
 <div class='content'>
-  <p>All photos</p>
   <% @photos.each do |photo| %>
     <img class='image' src="<%= photo.url %>" width="300px">
   <% end %>

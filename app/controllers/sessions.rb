@@ -4,13 +4,12 @@ get '/' do
 end
 
 post '/sessions' do
-  @user = User.find_by(params[:user])
+  @user = User.find(params[:user_id])
 
   if @user
     session[:user] = @user
     redirect "/user/#{@user.id}"
   else
-    @message = "LOL you can't get in"
     @photos = Photo.all
     erb :index
   end

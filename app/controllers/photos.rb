@@ -4,8 +4,8 @@ get "/photos/new" do
 end
 
 post '/photos' do
-  @user = session[:user]
+  @user = User.find(session[:user_id])
   @user.photos.create!(url: params[:url], description: params[:description])
-  
-  redirect "/user/#{@user.id}"
+
+  redirect "/"
 end

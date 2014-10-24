@@ -21,17 +21,17 @@
   <body>
     <header>
       <nav>
-        <img src="/imgs/logo.png" alt="Dev Bootcamp Logo" width="270" height="130">    
+        <img src="/imgs/logo.png" alt="Dev Bootcamp Logo" width="270" height="130">
         <h1 style='text-align: center'><a href="">Ink</a></h1>
         <div class="picture-upload">
-        <% if session[:user] != nil %>
+        <% if session[:user_id] != nil %>
           <form id="uploader" action="/photos/new" method="get">
             <input type='submit' value="Upload a Picture">
           </form>
           <% end %>
         </div>
-        <div class="user-login">    
-          <% if session[:user] %>
+        <div class="user-login">
+          <% if session[:user_id] %>
             <form id='logout' action='/logout' method='get'>
               <input type='submit' value='Log out'>
             </form>

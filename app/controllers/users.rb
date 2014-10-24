@@ -5,8 +5,8 @@ end
 
 post '/users' do
   @user = User.new(params[:user])
-  if @user.valid?
-    @user.save
+  if @user.save
+    session[:user_id] = @user.id
     redirect '/'
   else
     @photos = Photo.all
