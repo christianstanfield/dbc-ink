@@ -112,6 +112,7 @@ header nav .picture-upload input {
 	color: rgba(255, 255, 255, 1.0);
 	width: 150px;
 	height: 34px;
+	border-radius: 10px;
 }
 
 header nav .user-login {
@@ -125,6 +126,7 @@ header nav .user-login input {
 	color: rgba(255, 255, 255, 1.0);
 	width: 150px;
 	height: 34px;
+	border-radius: 10px;
 }
 
 .btn:hover{
