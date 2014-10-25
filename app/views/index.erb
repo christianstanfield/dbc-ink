@@ -1,8 +1,10 @@
 
 <% unless @photos.empty? %>
-<div class='content'>
+<div id="links" class='content'>
   <% @photos.each do |photo| %>
-    <img class='image' src="<%= photo.url %>" width="300px">
+  <a href="<%= photo.url %>" title="<%= photo.description %>" data-gallery>
+    <img class="image" src="<%= photo.url %>" width="300px">
+  </a>
   <% end %>
 </div>
 <% end %>

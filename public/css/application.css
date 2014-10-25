@@ -48,7 +48,7 @@ label{
 
 }
 
-.btn{
+.btn, .btn:visited, .btn:active{
   background-color: rgba(237, 81, 66, 1.0);
 }
 
@@ -132,6 +132,19 @@ header nav .user-login input {
 .btn:hover{
   background-color: rgba(176, 59, 48, 1.0);
 }
+
+.image{
+	width: 200px;
+	height: 200px;
+	padding-top: 10px;
+
+}
+
+.content{
+margin-left: 5%;
+margin-right: 5%;
+}
+
 
 
 
